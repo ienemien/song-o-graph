@@ -10,6 +10,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScalesComponent } from './scales/scales.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -18,7 +19,8 @@ import { ScalesComponent } from './scales/scales.component';
     AppComponent,
     NavigationComponent,
     DashboardComponent,
-    ScalesComponent
+    ScalesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
