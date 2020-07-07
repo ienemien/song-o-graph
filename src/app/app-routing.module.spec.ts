@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
-import { Location } from "@angular/common";
+import { Location } from '@angular/common';
 import {  of } from 'rxjs';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -12,9 +12,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { routes } from './app-routing.module';
 
 describe('routing', () => {
-    let location: Location;
-    let router: Router;
-    let fixture;
+  let location: Location;
+  let router: Router;
+  let fixture;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -28,8 +28,8 @@ describe('routing', () => {
       ]
     });
 
-    router = TestBed.get(Router);
-    location = TestBed.get(Location);
+    router = TestBed.inject(Router);
+    location = TestBed.inject(Location);
 
     fixture = TestBed.createComponent(AppComponent);
     fixture.ngZone.run(() => {
