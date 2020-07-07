@@ -50,11 +50,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm audit && ng lint && ng test"
+      "pre-commit": "npm audit --audit-level=moderate && ng lint && ng test"
     }
   },
   "jest": {
     "preset": "jest-preset-angular",
-    "setupFilesAfterEnv": ["<rootDir>/src/setupJest.ts"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupJest.ts"
+    ]
   }
 }
