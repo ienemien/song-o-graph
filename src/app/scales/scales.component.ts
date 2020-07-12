@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScaleService } from '../shared/scale.service';
 
 @Component({
   selector: 'sog-scales',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScalesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly scaleService: ScaleService) { }
 
   ngOnInit(): void {
+    this.scaleService.getScale('C').subscribe(scale => {
+      console.log(scale);
+    }, err => {
+      console.log(err);
+    });
   }
 
 }
