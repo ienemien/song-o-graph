@@ -2,17 +2,17 @@ import { Pitch } from './pitch';
 import { ScaleDegree } from './scale-degree.enum';
 
 export class Scale {
-  private pitchPerDegree: Map<ScaleDegree, Pitch>;
+  private pitchesPerDegree: Map<ScaleDegree, Pitch>;
 
-  constructor(pitchPerDegree: Map<ScaleDegree, Pitch>) {
-    this.pitchPerDegree = pitchPerDegree;
+  constructor(pitchesPerDegree: Map<ScaleDegree, Pitch>) {
+    this.pitchesPerDegree = pitchesPerDegree;
   }
 
   public allPitchesPerDegree(): Map<ScaleDegree, Pitch> {
-    return this.pitchPerDegree;
+    return this.pitchesPerDegree;
   }
 
   public findPitchByDegree(degree: ScaleDegree): Pitch {
-    return this.pitchPerDegree.get(degree);
+    return this.pitchesPerDegree.get(degree);
   }
 }
