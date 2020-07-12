@@ -6,5 +6,5 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ScaleService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }
