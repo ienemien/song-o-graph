@@ -9,6 +9,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScalesComponent } from './scales/scales.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ScaleService } from './shared/scale.service';
 import { routes } from './app-routing.module';
 
 describe('routing', () => {
@@ -25,6 +26,9 @@ describe('routing', () => {
         DashboardComponent,
         ScalesComponent,
         PageNotFoundComponent
+      ],
+      providers: [
+        { provide: ScaleService, useValue: jasmine.createSpyObj('ScaleService', ['getScale']) }
       ]
     });
 

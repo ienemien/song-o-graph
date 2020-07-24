@@ -1,1 +1,10 @@
-<p>scales works!</p>
+<ul *ngIf="scale">
+  <li *ngFor="let item of scale.pitchesPerDegree | keyvalue">
+    {{item.key}}:
+    <ul *ngIf="item.value">
+      <li *ngFor="let pitch of item.value.names">
+        {{pitch}}
+      </li>
+    </ul>
+  </li>
+</ul>
