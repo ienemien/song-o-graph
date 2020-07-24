@@ -26,16 +26,16 @@ describe('ScaleService', () => {
   });
 
   it('should get a scale by its tonic', () => {
-    service.getScale('C').subscribe(scale => {
-      expect(scale.findPitchByDegree(ScaleDegree.TONIC).names[0]).toEqual('C');
+    service.getScale('A').subscribe(scale => {
+      expect(scale.pitchesPerDegree.get(ScaleDegree.TONIC).names[0]).toEqual('A');
     }, error => {
       fail(error);
     });
 
-    const req = httpTestingController.expectOne('api/scale?tonic=C');
+    const req = httpTestingController.expectOne('api/scale?tonic=A');
 
     expect(req.request.method).toEqual('GET');
-    req.flush(ScalesStub.C_MAJOR);
+    req.flush(ScalesStub.A_MAJOR);
    });
 
   afterEach(() => {

@@ -11,7 +11,7 @@ describe('ScalesComponent', () => {
 
   beforeEach(() => {
     scaleServiceSpy = jasmine.createSpyObj('ScaleService', ['getScale']);
-    scaleServiceSpy.getScale.and.returnValue(of(ScalesStub.C_MAJOR));
+    scaleServiceSpy.getScale.and.returnValue(of(ScalesStub.A_MAJOR));
 
     TestBed.configureTestingModule({
       declarations: [ScalesComponent],
