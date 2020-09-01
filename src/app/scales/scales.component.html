@@ -1,9 +1,9 @@
 <label for="tonic-select">Select tonic:</label>
 <select  (change)="changeTonic()" [formControl]="tonicNameControl" id="tonic-select">
-  <option *ngFor="let tonic of notes" [ngValue]="tonic">{{tonic}}</option>
+  <option *ngFor="let tonic of notes" [value]="tonic">{{tonic}}</option>
 </select>
 
-<ul *ngIf="scale">
+<ul id="scale" *ngIf="scale">
   <li *ngFor="let item of scale.pitchesPerDegree | keyvalue">
     {{item.key}}:
     <ul *ngIf="item.value">
