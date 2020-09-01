@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
@@ -28,7 +29,8 @@ describe('routing', () => {
         PageNotFoundComponent
       ],
       providers: [
-        { provide: ScaleService, useValue: jasmine.createSpyObj('ScaleService', ['getScale']) }
+        { provide: ScaleService, useValue: jasmine.createSpyObj('ScaleService', ['getScale']) },
+        FormBuilder
       ]
     });
 
