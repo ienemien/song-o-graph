@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/song-o-graph' }

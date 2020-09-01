@@ -1,3 +1,8 @@
+<label for="tonic-select">Select tonic:</label>
+<select  (change)="changeTonic()" [formControl]="tonicNameControl" id="tonic-select">
+  <option *ngFor="let tonic of notes" [ngValue]="tonic">{{tonic}}</option>
+</select>
+
 <ul *ngIf="scale">
   <li *ngFor="let item of scale.pitchesPerDegree | keyvalue">
     {{item.key}}:

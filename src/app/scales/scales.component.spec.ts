@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
 import { ScalesStub } from '../testing-utils/scales-stub';
 import { ScaleService } from '../shared/scale.service';
@@ -15,7 +16,7 @@ describe('ScalesComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [ScalesComponent],
-      providers: [{ provide: ScaleService, useValue: scaleServiceSpy }]
+      providers: [{ provide: ScaleService, useValue: scaleServiceSpy }, FormBuilder]
     });
 
     fixture = TestBed.createComponent(ScalesComponent);
